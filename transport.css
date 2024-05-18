@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#fly_car{
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.head_text{
+    position: absolute;
+    top: 8rem;
+    left: 20rem;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(1, 13, 17);
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    animation: animate 1.2s ease-in-out 0.3s 1 forwards;
+  }
+  @keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+.container_1{
+    height: 50vh;
+    width: auto;
+    background-image: linear-gradient(to right, #9AA899, #54577C);
+    display: flex;
+    gap: 5rem;
+}
+.text2{
+    height: 1vh;
+    width: 55vw;
+    padding: 3.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bold;
+    font-size: larger;
+}
+#one{
+  font-size: 5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: one 3s infinite alternate;
+}
+@keyframes one{
+    from {
+        margin-left: 90%;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 8%;
+        width: 90%;
+      }
+      
+  }
+.content{
+  background-attachment: fixed;
+  background-image: url(images/cover_img2.jpg);
+  background-size: cover;
+  height: auto;
+  width: auto;
+  z-index: 1;
+  top: 20rem;
+}
+.main_text{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 800;
+    height: auto;
+    width: auto;
+    text-align: center;
+    padding: 8rem;
+    animation: animate1 1s ease-in-out 0.3s 1 alternate;
+}
+@keyframes animate1 {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+.flying_car{
+    position: relative;
+    top: 4rem;
+    left: 5rem;
+    height: 60vh;
+    width: 40vw;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.flying_car::before,
+.flying_car::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+    transform: perspective(25rem) rotateX(var(--rotate, 0deg)) scale(var(--scale, 1));
+    transform-origin: bottom;
+    transition: .5s ease-in-out;
+}
+
+.flying_car::before {
+     background-color: transparent;
+    backdrop-filter: blur(0.1rem);
+    color: white;
+}
+
+.flying_car::after {
+    background-image: url(images/Flying-Taxi.png);
+    height: -90%;
+}
+
+.flying_car:hover::before,
+.flying_car:hover::after {
+    --scale: 1.3;
+}
+
+.flying_car:hover::before {
+    --rotate: 65deg;
+    filter: blur(.5px);
+}
+
+#maglev{
+    top: 55rem;
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.text3{
+    position: absolute;
+    height: 1vh;
+    width: 55vw;
+    padding: 5.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bolder;
+    font-size: larger;
+    z-index: 1;
+}
+#two{
+    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: two 3s infinite alternate;
+}
+@keyframes two{
+    from {
+        margin-left: -100%;
+        width: 100%;
+    }
+    to {
+        margin-left: 6%;
+        width: 100%;
+    }
+      
+  }
+#hyperloop{
+    top: 55rem;
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: 0;
+
+}
+.text4{
+    position: absolute;
+    height: 1vh;
+    width: 55vw;
+    margin-left: 47rem;
+    padding: 5.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bolder;
+    font-size: larger;
+    z-index: 1;
+}
+#three{
+    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: one 3s infinite alternate;
+}
+@keyframes three{
+    from {
+        margin-left: 90%;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 8%;
+        width: 90%;
+      }
+      
+  }
+@media (max-width: 425px) {
+    #fly_car {
+        height: 100rem;
+        width: 100rem; /* Adjust height for smaller screens */
+    }
+    .head_text{
+        top: 50rem;
+        width: 60rem;
+        left: 15rem;
+      }
+    .content{
+        background-attachment: fixed;
+        background-image: url(images/cover_img2.jpg);
+        background-size: cover;
+        height: 50rem;
+        width: 100rem;
+        z-index: 1;
+        top: 20rem;
+      }
+    .main_text{
+        position: relative;
+        font-size: 2rem;
+        font-weight: 800;
+        height: 50rem;
+        width: 70rem;
+        text-align: center;
+        padding-top: 15rem;
+        margin-left: 7rem;
+        animation: animate1 1s ease-in-out 0.3s 1 alternate;
+    }
+    .container_1{
+        height: 100rem;
+        width: 100rem;
+        background-image: linear-gradient(to right, #9AA899, #54577C);
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .text2{
+        position: relative;
+        margin-top: 10rem;
+        height: 2rem;
+        width: 80rem;
+        padding: 3.5rem;
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .flying_car{
+        position: relative;
+        top:15rem;
+        left: 8rem;
+        height: 50rem;
+        width: 70rem;
+        cursor: pointer;
+        z-index: 0;
+    }
+    
+    .flying_car::before,
+    .flying_car::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        transform: perspective(25rem) rotateX(var(--rotate, 0deg)) scale(var(--scale, 1));
+        transform-origin: bottom;
+        transition: .5s ease-in-out;
+    }
+    
+    .flying_car::before {
+         background-color: transparent;
+        backdrop-filter: blur(0.1rem);
+        color: white;
+    }
+    
+    .flying_car::after {
+        background-image: url(images/Flying-Taxi.png);
+        height: -90%;
+    }
+    
+    .flying_car:hover::before,
+    .flying_car:hover::after {
+        --scale: 1.3;
+    }
+    
+    .flying_car:hover::before {
+        --rotate: 65deg;
+        filter: blur(.5px);
+    }
+    #maglev{
+        top: 80rem;
+        width: 100rem;
+        height: 100rem;
+        object-fit: cover;
+        opacity: 0.5;
+        z-index: 0;
+    }
+    
+    .text3{
+        position: absolute;
+        height: 1rem;
+        width: 70rem;
+        margin-top: 45rem;
+        padding-left: 18rem ;
+        /* padding: 20.5rem; */
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bolder;
+        font-size: large;
+        z-index: 1;
+    }
+    #two{
+        font-size: 5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation: two 3s infinite alternate;
+    }
+    @keyframes two{
+        from {
+            margin-left: -100%;
+            width: 100%;
+        }
+        to {
+            margin-left: 6%;
+            width: 100%;
+        }
+          
+      }
+      #hyperloop{
+        top: 55rem;
+        width: 100rem;
+        height: 150rem;
+        object-fit: cover;
+        opacity: 0.7;
+        z-index: 0;
+    
+    }
+    .text4{
+        position: absolute;
+        height: 1rem;
+        width: 80rem;
+        margin-top: 65rem;
+        margin-left: 2rem;
+        /* padding-left: 2rem ; */
+        /* padding: 20.5rem; */
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bolder;
+        font-size: large;
+        z-index: 1;
+    }
+    }
+    #three{
+        font-size: 5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation: one 3s infinite alternate;
+    }
+    @keyframes three{
+        from {
+            margin-left: 90%;
+            width: 100%;
+          }
+        
+          to {
+            margin-left: 8%;
+            width: 90%;
+          }
+          
+}
+      

@@ -43,7 +43,7 @@ body{
   }
   .content{
     background-attachment: fixed;
-    background-image: url(images/bg_img5.jpg);
+    background-image: url(bg_img5.jpg);
     background-size: cover;
     height: auto;
     width: auto;
@@ -131,11 +131,11 @@ body{
 }
 
 .green_city::before {
-    background-image: url(images/image18.jpg);
+    background-image: url(image18.jpg);
 }
 
 .green_city::after {
-    background-image: url(images/image17.png);
+    background-image: url(image17.png);
     height: -100%;
 }
 
@@ -180,7 +180,7 @@ body{
       }
       .content{
         background-attachment: fixed;
-        background-image: url(images/bg_img5.jpg);
+        background-image: url(bg_img5.jpg);
         background-size: cover;
         height: 50rem;
         width: 100rem;

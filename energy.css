@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#energy{
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.head_text{
+    position: absolute;
+    top: 8rem;
+    left: 15rem;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: black;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    animation: head_text 1.5s ease-in-out 2ms;
+  }
+  @keyframes head_text{
+    from {
+        margin-left: -100%;
+        width: 90%;
+    }
+      
+  }
+  .content{
+    background-attachment: fixed;
+    background-image: url(bg_img5.jpg);
+    background-size: cover;
+    height: auto;
+    width: auto;
+    z-index: 1;
+    top: 20rem;
+  }
+  .main_text{
+      position: relative;
+      font-size: 2rem;
+      font-weight: 800;
+      height: auto;
+      width: auto;
+      color: black;
+      background-color: transparent;
+      backdrop-filter: blur(0.3rem);
+      text-align: center;
+      padding: 8rem;
+      animation: main_text 1.1s ease-in-out ;
+  }
+  @keyframes main_text {
+      from {
+          bottom: -100vh;
+      }
+      to {
+          bottom: 0.001vh; 
+      }
+  }
+.container_1{
+    height: 100vh;
+    width: auto;
+    background-image: linear-gradient(to right, #26eb3a, #88D498);
+    display: flex;
+    gap: 5rem;
+}
+.text2{
+    height: 1vh;
+    width: 55vw;
+    padding-top: 10.5rem;
+    padding-left: 3rem;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+#one{
+   
+  font-size: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: one 3s infinite alternate;
+}
+@keyframes one{
+    from {
+        margin-left: 120%;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 8%;
+        width: 100%;
+      }
+      
+  }
+.green_city{
+    position: relative;
+    top: 8rem;
+    left: 5%;
+    height: 60vh;
+    width: 30vw;
+    cursor: pointer;
+}
+
+.green_city::before,
+.green_city::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+    transform: perspective(25rem) rotateX(var(--rotate, 0deg)) scale(var(--scale, 1));
+    transform-origin: bottom;
+    transition: .5s ease-in-out;
+}
+
+.green_city::before {
+    background-image: url(image18.jpg);
+}
+
+.green_city::after {
+    background-image: url(image17.png);
+    height: -100%;
+}
+
+.green_city:hover::before,
+.green_city:hover::after {
+    --scale: 1.5;
+}
+
+.green_city:hover::before {
+    --rotate: 65deg;
+    filter: blur(.5px);
+}

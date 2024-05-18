@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-image: url(images/bg_img3.png);
+    background-image: url(bg_img3.png);
     width: 80vw;
     height: 80vh;
     background-repeat: no-repeat;
@@ -246,7 +246,7 @@ a:hover{
 }
 @media (max-width: 425px) {
     body{
-        background-image: url(images/bg_img3.png);
+        background-image: url(bg_img3.png);
         width: 80vw;
         height: 80rem;
         background-repeat: no-repeat;
